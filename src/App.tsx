@@ -9,6 +9,7 @@ import { AuthProvider } from "./contexts/AuthContext";
 import { JournalProvider } from "./contexts/JournalContext";
 import Login from "./pages/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Landing from "./pages/Landing";
 
 // Adicionar logs para depuração
 console.log("App iniciando");
@@ -30,9 +31,11 @@ const App = () => {
             <Sonner />
             <BrowserRouter>
               <Routes>
+                {/* Landing page como página inicial */}
+                <Route path="/" element={<Landing />} />
                 <Route path="/login" element={<Login />} />
                 <Route 
-                  path="/" 
+                  path="/app" 
                   element={
                     <ProtectedRoute>
                       <Index />

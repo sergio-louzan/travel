@@ -30,7 +30,7 @@ const LogoutButton: React.FC<LogoutButtonProps> = ({
         title: 'Desconectado',
         description: 'Você foi desconectado com sucesso',
       });
-      navigate('/login');
+      navigate('/');
     } catch (error) {
       console.error('Erro ao fazer logout:', error);
       toast({

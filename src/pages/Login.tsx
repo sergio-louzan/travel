@@ -8,7 +8,7 @@ const Login: React.FC = () => {
 
   // Se já estiver autenticado, redirecionar para a página principal
   if (user && !loading) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/app" replace />;
   }
 
   return (
